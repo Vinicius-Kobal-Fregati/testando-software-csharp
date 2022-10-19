@@ -40,7 +40,7 @@ namespace Alura.Estacionamento.Modelos
                 {
                     throw new FormatException("O 4° caractere deve ser um hífen");
                 }
-                //checa se os 3 primeiros caracteres são numeros
+                //checa se os 5 últimos caracteres são numeros
                 for (int i = 4; i < 8; i++)
                 {
                     if (!char.IsDigit(value[i]))
@@ -71,7 +71,18 @@ namespace Alura.Estacionamento.Modelos
         }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSaida { get; set; }   
-        public TipoVeiculo Tipo { get => _tipo; set => _tipo = value; }
+        public TipoVeiculo Tipo
+        {
+            get => _tipo;
+
+            set 
+            {
+                if (value == null)
+                    _tipo = TipoVeiculo.Automovel;
+                else 
+                    _tipo = value;
+            } 
+        }
 
         //Métodos
         public void Acelerar(int tempoSeg)
@@ -94,7 +105,5 @@ namespace Alura.Estacionamento.Modelos
         {
            Proprietario = proprietario;
         }
-
-       
     }
 }

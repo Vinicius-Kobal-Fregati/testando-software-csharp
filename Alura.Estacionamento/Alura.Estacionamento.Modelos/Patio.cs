@@ -82,10 +82,5 @@ namespace Alura.Estacionamento.Modelos
 
             return informacao;
         }
-
-        
-
-       
-    
     }
 }

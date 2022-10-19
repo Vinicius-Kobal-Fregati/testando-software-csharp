@@ -46,3 +46,19 @@ C:\Users\andre\OneDrive\Documentos\Projetos\Aula01\Alura.Estacionamento\Alura.Es
 C:\Users\andre\OneDrive\Documentos\Projetos\Aula01\Alura.Estacionamento\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.pdb
 C:\Users\andre\OneDrive\Documentos\Projetos\Aula01\Alura.Estacionamento\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.genruntimeconfig.cache
 C:\Users\andre\OneDrive\Documentos\Projetos\Aula01\Alura.Estacionamento\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.csproj.AssemblyReference.cache
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.exe
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.deps.json
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.runtimeconfig.json
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.runtimeconfig.dev.json
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.dll
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\bin\Debug\net5.0\Alura.Estacionamento.pdb
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.csproj.AssemblyReference.cache
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.AssemblyInfoInputs.cache
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.AssemblyInfo.cs
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.csproj.CoreCompileInputs.cache
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.dll
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\refint\Alura.Estacionamento.dll
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.pdb
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\Alura.Estacionamento.genruntimeconfig.cache
+C:\Users\Win10\Desktop\Projetos Pottencial\Extras\2 - Testes em .NET testando software\testando-software-csharp\Alura.Estacionamento\obj\Debug\net5.0\ref\Alura.Estacionamento.dll
