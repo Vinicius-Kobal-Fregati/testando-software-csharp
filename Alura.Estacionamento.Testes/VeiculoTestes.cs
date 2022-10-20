@@ -3,9 +3,10 @@ using Alura.Estacionamento.Modelos;
 
 namespace Alura.Estacionamento.Testes;
 
-public class UnitTest1
+public class VeiculoTestes
 {
-    [Fact]
+    [Fact(DisplayName = "Teste n°1")]
+    [Trait("Funcionalidade", "Acelerar")]
     public void TestaVeiculoAcelerar()
     {
         //Arrange
@@ -16,7 +17,8 @@ public class UnitTest1
         Assert.Equal(100, veiculo.VelocidadeAtual);
     }
 
-    [Fact]
+    [Fact(DisplayName = "Teste n°2")]
+    [Trait("Funcionalidade", "Frear")]
     public void TestaVeiculoFrear()
     {
         //Arrange
@@ -28,7 +30,7 @@ public class UnitTest1
         Assert.Equal(-150, veiculo.VelocidadeAtual);
     }
 
-    [Fact]
+    [Fact(DisplayName = "Teste n°3")]
     public void TestaTipoVeiculo()
     {
         //Arrange
@@ -38,7 +40,7 @@ public class UnitTest1
         Assert.Equal(TipoVeiculo.Automovel, veiculo.Tipo);
     }
 
-    [Fact]
+    [Fact(DisplayName = "Teste n°4")]
     public void TestaConstrutor()
     {
         //Arrange
@@ -46,5 +48,11 @@ public class UnitTest1
         //Act
         //Assert
         Assert.Equal("Vinícius", veiculo.Proprietario);
+    }
+
+    [Fact(DisplayName = "Teste n°5", Skip ="Teste ainda não implementado. Ignorar")]
+    public void ValidaNomeProprietario()
+    { 
+
     }
 }
