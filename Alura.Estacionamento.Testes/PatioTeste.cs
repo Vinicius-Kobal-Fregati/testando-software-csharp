@@ -5,17 +5,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xunit.Abstractions;
 
 namespace Alura.Estacionamento.Testes
 {
-    public class PatioTeste
+    public class PatioTeste : IDisposable
     {
+        private Veiculo veiculo;
+        private Patio estacionamento;
+        // Permite gerar consoles no teste
+        public ITestOutputHelper SaidaConsoleTeste;
+
+        public PatioTeste(ITestOutputHelper _saidaConsoleTeste)
+        {
+            SaidaConsoleTeste = _saidaConsoleTeste;
+            SaidaConsoleTeste.WriteLine("Construtor invocado.");
+            veiculo = new Veiculo();
+            estacionamento = new Patio();
+        }
+
         [Fact]
         public void ValidaFaturamentoComUmVeiculo()
         {
             //Arrange
-            Patio estacionamento = new Patio();
-            Veiculo veiculo = new Veiculo();
             veiculo.Proprietario = "Vinícius Fregati";
             veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Cor = "Verde";
@@ -42,8 +54,6 @@ namespace Alura.Estacionamento.Testes
                                                                        string modelo)
         {
             //Arrange
-            Patio estacionamento = new Patio();
-            Veiculo veiculo = new Veiculo();
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;
             veiculo.Cor = cor;
@@ -66,8 +76,6 @@ namespace Alura.Estacionamento.Testes
                                                          string modelo)
         {
             //Arrange
-            Patio estacionamento = new Patio();
-            Veiculo veiculo = new Veiculo();
             veiculo.Proprietario = proprietario;
             veiculo.Placa = placa;
             veiculo.Cor = cor;
@@ -86,8 +94,6 @@ namespace Alura.Estacionamento.Testes
         public void AlterarDadosDoProprioVeiculo()
         {
             //Arrange
-            Patio estacionamento = new Patio();
-            Veiculo veiculo = new Veiculo();
             veiculo.Proprietario = "Vinícius Fregati";
             veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Cor = "Verde";
@@ -108,6 +114,11 @@ namespace Alura.Estacionamento.Testes
 
             //Assert
             Assert.Equal(alterado.Cor, veiculoAlterado.Cor);
+        }
+
+        public void Dispose()
+        {
+            SaidaConsoleTeste.WriteLine("Dispose invocado.");
         }
     }
 }

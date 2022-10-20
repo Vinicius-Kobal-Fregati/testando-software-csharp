@@ -1,15 +1,27 @@
 using Alura.Estacionamento.Alura.Estacionamento.Modelos;
 using Alura.Estacionamento.Modelos;
+using Xunit.Abstractions;
 
 namespace Alura.Estacionamento.Testes;
 
-public class VeiculoTestes
+public class VeiculoTestes : IDisposable
 {
+    private Veiculo veiculo;
+    // Permite gerar consoles no teste
+    public ITestOutputHelper SaidaConsoleTeste;
+
+    //Sempre antes de executar um método, chama o construtor
+    public VeiculoTestes(ITestOutputHelper _saidaConsoleTeste) 
+    {
+        SaidaConsoleTeste = _saidaConsoleTeste;
+        SaidaConsoleTeste.WriteLine("Construtor invocado.");
+        veiculo = new Veiculo();
+    }
+
     [Fact]
     public void TestaVeiculoAcelerarComParametro10()
     {
         //Arrange
-        var veiculo = new Veiculo();
         //Act
         veiculo.Acelerar(10);
         //Assert
@@ -20,7 +32,6 @@ public class VeiculoTestes
     public void TestaVeiculoFrearComParametro10()
     {
         //Arrange
-        var veiculo = new Veiculo();
         //Act
         veiculo.Frear(10);
         //Assert
@@ -32,20 +43,19 @@ public class VeiculoTestes
     public void TestaTipoDoVeiculo()
     {
         //Arrange
-        Veiculo veiculo = new Veiculo();
         //Act
         //Assert
         Assert.Equal(TipoVeiculo.Automovel, veiculo.Tipo);
     }
 
-    [Fact]
+    [Fact(Skip = "Desnecessário por conta do Setup")]
     public void TestaConstrutorDoVeiculoComParametroVinicius()
     {
         //Arrange
-        Veiculo veiculo = new Veiculo("Vinícius");
+        Veiculo veiculo2 = new Veiculo("Vinícius");
         //Act
         //Assert
-        Assert.Equal("Vinícius", veiculo.Proprietario);
+        Assert.Equal("Vinícius", veiculo2.Proprietario);
     }
 
     //[Fact(DisplayName = "Teste n°5", Skip = "Teste ainda não implementado. Ignorar")]
@@ -59,17 +69,21 @@ public class VeiculoTestes
     public void FichaDeInformacaoDoVeiculo()
     {
         //Arrange
-        Veiculo carro = new Veiculo();
-        carro.Proprietario = "Vinícius Fregati";
-        carro.Tipo = TipoVeiculo.Automovel;
-        carro.Placa = "ZAP-7419";
-        carro.Cor = "Azul";
-        carro.Modelo = "Variante";
+        veiculo.Proprietario = "Vinícius Fregati";
+        veiculo.Tipo = TipoVeiculo.Automovel;
+        veiculo.Placa = "ZAP-7419";
+        veiculo.Cor = "Azul";
+        veiculo.Modelo = "Variante";
 
         //Act
-        string dados = carro.ToString();
+        string dados = veiculo.ToString();
 
         //Assert
         Assert.Contains("Ficha do Veículo:", dados);
+    }
+
+    public void Dispose()
+    {
+        SaidaConsoleTeste.WriteLine("Dispose invocado.");
     }
 }
