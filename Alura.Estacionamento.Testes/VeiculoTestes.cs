@@ -55,4 +55,22 @@ public class VeiculoTestes
     { 
 
     }
+
+    [Fact]
+    public void DadosVeiculo()
+    {
+        //Arrange
+        Veiculo carro = new Veiculo();
+        carro.Proprietario = "Vinícius Fregati";
+        carro.Tipo = TipoVeiculo.Automovel;
+        carro.Placa = "ZAP-7419";
+        carro.Cor = "Azul";
+        carro.Modelo = "Variante";
+
+        //Act
+        string dados = carro.ToString();
+
+        //Assert
+        Assert.Contains("Ficha do Veículo:", dados);
+    }
 }

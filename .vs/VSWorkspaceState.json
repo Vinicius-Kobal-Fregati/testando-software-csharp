@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Alura.Estacionamento.Testes"
+    "\\Alura.Estacionamento",
+    "\\Alura.Estacionamento.Testes",
+    "\\Alura.Estacionamento\\Alura.Estacionamento.Modelos"
   ],
   "SelectedNode": "\\Alura.Estacionamento.sln",
   "PreviewInSolutionExplorer": false
