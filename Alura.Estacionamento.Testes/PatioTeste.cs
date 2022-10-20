@@ -11,7 +11,7 @@ namespace Alura.Estacionamento.Testes
     public class PatioTeste
     {
         [Fact]
-        public void ValidaFaturamento()
+        public void ValidaFaturamentoComUmVeiculo()
         {
             //Arrange
             Patio estacionamento = new Patio();
@@ -36,10 +36,10 @@ namespace Alura.Estacionamento.Testes
         [InlineData("Vinícius Fregati", "POL-9242", "Cinza", "Uno")]
         [InlineData("Maria Andrade", "GDR-1234", "Azul", "Opala")]
         [InlineData("Pedro Andrade", "GDR-0101", "Azul", "Corsa")]
-        public void ValidaFaturamentoComVariosVeiculos(string proprietario,
-                                                       string placa,
-                                                       string cor,
-                                                       string modelo)
+        public void ValidaFaturamentoDoEstacionamentoComVariosVeiculos(string proprietario,
+                                                                       string placa,
+                                                                       string cor,
+                                                                       string modelo)
         {
             //Arrange
             Patio estacionamento = new Patio();
@@ -60,10 +60,10 @@ namespace Alura.Estacionamento.Testes
 
         [Theory]
         [InlineData("André Silva", "ASD-1498", "preto", "Gol")]
-        public void LocalizaVeiculoNoPatio(string proprietario,
-                                           string placa,
-                                           string cor,
-                                           string modelo)
+        public void LocalizaVeiculoNoPatioComBaseNaPlaca(string proprietario,
+                                                         string placa,
+                                                         string cor,
+                                                         string modelo)
         {
             //Arrange
             Patio estacionamento = new Patio();
@@ -83,7 +83,7 @@ namespace Alura.Estacionamento.Testes
         }
 
         [Fact]
-        public void AlterarDadosVeiculo()
+        public void AlterarDadosDoProprioVeiculo()
         {
             //Arrange
             Patio estacionamento = new Patio();

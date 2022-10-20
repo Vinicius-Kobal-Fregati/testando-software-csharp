@@ -5,9 +5,8 @@ namespace Alura.Estacionamento.Testes;
 
 public class VeiculoTestes
 {
-    [Fact(DisplayName = "Teste n°1")]
-    [Trait("Funcionalidade", "Acelerar")]
-    public void TestaVeiculoAcelerar()
+    [Fact]
+    public void TestaVeiculoAcelerarComParametro10()
     {
         //Arrange
         var veiculo = new Veiculo();
@@ -17,9 +16,8 @@ public class VeiculoTestes
         Assert.Equal(100, veiculo.VelocidadeAtual);
     }
 
-    [Fact(DisplayName = "Teste n°2")]
-    [Trait("Funcionalidade", "Frear")]
-    public void TestaVeiculoFrear()
+    [Fact]
+    public void TestaVeiculoFrearComParametro10()
     {
         //Arrange
         var veiculo = new Veiculo();
@@ -30,8 +28,8 @@ public class VeiculoTestes
         Assert.Equal(-150, veiculo.VelocidadeAtual);
     }
 
-    [Fact(DisplayName = "Teste n°3")]
-    public void TestaTipoVeiculo()
+    [Fact]
+    public void TestaTipoDoVeiculo()
     {
         //Arrange
         Veiculo veiculo = new Veiculo();
@@ -40,8 +38,8 @@ public class VeiculoTestes
         Assert.Equal(TipoVeiculo.Automovel, veiculo.Tipo);
     }
 
-    [Fact(DisplayName = "Teste n°4")]
-    public void TestaConstrutor()
+    [Fact]
+    public void TestaConstrutorDoVeiculoComParametroVinicius()
     {
         //Arrange
         Veiculo veiculo = new Veiculo("Vinícius");
@@ -50,14 +48,15 @@ public class VeiculoTestes
         Assert.Equal("Vinícius", veiculo.Proprietario);
     }
 
-    [Fact(DisplayName = "Teste n°5", Skip ="Teste ainda não implementado. Ignorar")]
+    //[Fact(DisplayName = "Teste n°5", Skip = "Teste ainda não implementado. Ignorar")]
+    [Fact(Skip = "Teste ainda não implementado. Ignorar")]
     public void ValidaNomeProprietario()
     { 
 
     }
 
     [Fact]
-    public void DadosVeiculo()
+    public void FichaDeInformacaoDoVeiculo()
     {
         //Arrange
         Veiculo carro = new Veiculo();
