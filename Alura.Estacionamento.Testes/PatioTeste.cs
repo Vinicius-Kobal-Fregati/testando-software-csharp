@@ -13,6 +13,7 @@ namespace Alura.Estacionamento.Testes
     {
         private Veiculo veiculo;
         private Patio estacionamento;
+        private Operador operador;  
         // Permite gerar consoles no teste
         public ITestOutputHelper SaidaConsoleTeste;
 
@@ -22,6 +23,9 @@ namespace Alura.Estacionamento.Testes
             SaidaConsoleTeste.WriteLine("Construtor invocado.");
             veiculo = new Veiculo();
             estacionamento = new Patio();
+            operador = new Operador();
+            operador.Nome = "Pedro Fagundes";
+            estacionamento.OperadorPatio = operador;
         }
 
         [Fact]
@@ -70,10 +74,10 @@ namespace Alura.Estacionamento.Testes
 
         [Theory]
         [InlineData("André Silva", "ASD-1498", "preto", "Gol")]
-        public void LocalizaVeiculoNoPatioComBaseNaPlaca(string proprietario,
-                                                         string placa,
-                                                         string cor,
-                                                         string modelo)
+        public void LocalizaVeiculoNoPatioComBaseNoIdTicket(string proprietario,
+                                                            string placa,
+                                                            string cor,
+                                                            string modelo)
         {
             //Arrange
             veiculo.Proprietario = proprietario;
@@ -84,10 +88,10 @@ namespace Alura.Estacionamento.Testes
             estacionamento.RegistrarEntradaVeiculo(veiculo);
 
             //Act
-            var consultado = estacionamento.PesquisaVeiculo(placa);
+            var consultado = estacionamento.PesquisaVeiculo(veiculo.IdTicket);
 
             //Assert
-            Assert.Equal(placa, consultado.Placa);
+            Assert.Contains("### Ticket Estacionamento Alura ###", consultado.Ticket);
         }
 
         [Fact]
@@ -114,6 +118,18 @@ namespace Alura.Estacionamento.Testes
 
             //Assert
             Assert.Equal(alterado.Cor, veiculoAlterado.Cor);
+        }
+
+        //Testando um método privado através de um público
+        [Fact]
+        public void TestaIndiretamenteMetodoPrivadoGerarTicketAtravesDoRegistrarEntradaVeiculo()
+        {
+            //Arrange
+            //Act
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+
+            //Assert
+            Assert.Contains("### Ticket Estacionamento Alura ###", veiculo.Ticket);
         }
 
         public void Dispose()
